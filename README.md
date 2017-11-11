@@ -9,15 +9,15 @@ In this nginx.conf file it does the bulk of the common configuration for all hos
 
 At the end of this file it include a variety of other folders.
 
- #######################################################
- ###  nginx virtual domains
- #######################################################
- 
- # virtual hosts
- include /var/aegir/config/server_master/nginx/pre.d/*;
- include /var/aegir/config/server_master/nginx/platform.d/*;
- include /var/aegir/config/server_master/nginx/vhost.d/*;
- include /var/aegir/config/server_master/nginx/post.d/*;
+```#######################################################
+###  nginx virtual domains
+#######################################################
+
+# virtual hosts
+include /var/aegir/config/server_master/nginx/pre.d/*;
+include /var/aegir/config/server_master/nginx/platform.d/*;
+include /var/aegir/config/server_master/nginx/vhost.d/*;
+include /var/aegir/config/server_master/nginx/post.d/*;```
 
 The important one here is the vhost.d folder.
 
