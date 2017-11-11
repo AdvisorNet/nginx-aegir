@@ -1,0 +1,22 @@
+
+server {
+  include       fastcgi_params;
+
+  # Block https://httpoxy.org/ attacks.
+  fastcgi_param HTTP_PROXY "";
+
+  fastcgi_param MAIN_SITE_NAME aegir-host.local;
+  set $main_site_name "aegir-host.local";
+  fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+  fastcgi_param db_type   mysql;
+  fastcgi_param db_name   aegirhostlocal;
+  fastcgi_param db_user   aegirhostlocal;
+  fastcgi_param db_passwd PCq2SdPMhC;
+  fastcgi_param db_host   localhost;
+  fastcgi_param db_port   3306;
+  listen        *:80;
+  server_name   aegir-host.local;
+  root          /var/aegir/hostmaster-7.x-3.121;
+  # Extra configuration from modules:
+  include       /var/aegir/config/includes/nginx_vhost_common.conf;
+}
