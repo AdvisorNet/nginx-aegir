@@ -40,6 +40,8 @@ Ticking the nginx box in the aegir control panel only changes the vhost configur
 8. Test everything is working.
 
 
+## Final Notes
+You don't need to copy any other files except the two listed above.  It is really important to edit the 4 entries in the virtual hosts section of nginx.conf before activating nginx though.
 
 
 
