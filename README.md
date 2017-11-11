@@ -4,6 +4,7 @@ notes for converting an aegir install from apache to nginx
 ## How nginx files are called.
 
 In the nginx configuration in /etc/nginx  we include /var/aegir/config/nginx.conf this is a symbolic link to /var/aegir/config/{server_name}/nginx.conf
+
 ` ln -s /var/aegir/config/nginx.conf /etc/nginx/conf.d/aegir.conf`
 
 In this nginx.conf file it does the bulk of the common configuration for all hosts.  
